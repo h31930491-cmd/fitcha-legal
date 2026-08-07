@@ -1,0 +1,191 @@
+---
+layout: null
+permalink: /
+---
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>핏챠 — 헬스장 운영, 앱 하나로 끝.</title>
+<meta name="description" content="회원·수업·매출·정산을 한 곳에서. 헬스장 대표와 트레이너가 함께 쓰는 관리 앱입니다.">
+<meta name="theme-color" content="#0f1115">
+<meta property="og:type" content="website">
+<meta property="og:title" content="핏챠 — 헬스장 운영, 앱 하나로 끝.">
+<meta property="og:description" content="회원·수업·매출·정산을 한 곳에서. 헬스장 대표와 트레이너가 함께 쓰는 관리 앱입니다.">
+<meta property="og:locale" content="ko_KR">
+<style>
+  /* 앱과 같은 팔레트 — bg #0f1115 · 금색 #d4a849 · 청록 #3dc9a5 (lib/theme.ts) */
+  :root {
+    --bg: #0f1115;
+    --surface: #161a21;
+    --border: #232833;
+    --text: #e9edf3;
+    --sub: #a8b0bd;
+    --faint: #6b7382;
+    --gold: #d4a849;
+    --teal: #3dc9a5;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    line-height: 1.7;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+  .wrap { max-width: 560px; margin: 0 auto; padding: 0 22px; }
+
+  /* ── 헤드라인 ── */
+  header { padding: 68px 0 52px; text-align: center; }
+  .mark {
+    font-size: 15px; font-weight: 700; letter-spacing: 0.22em;
+    color: var(--gold); margin: 0 0 18px;
+  }
+  h1 {
+    margin: 0 0 20px;
+    font-size: 30px; line-height: 1.35; font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .sub { margin: 0; color: var(--sub); font-size: 15.5px; line-height: 1.75; }
+
+  /* ── 다운로드 ── */
+  .cta { padding: 0 0 56px; text-align: center; }
+  .badge {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    background: rgba(212, 168, 73, 0.10);
+    color: var(--gold);
+    font-size: 15.5px; font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  /* 승인 후 .badge 를 span 에서 a 로 바꿔도 이 스타일이 그대로 먹는다(태그 선택자를 쓰지 않았다) */
+  a.badge { text-decoration: none; }
+
+  /* ── 기능 ── */
+  section { padding: 0 0 56px; }
+  .feat {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface);
+    padding: 20px 20px 18px;
+    margin: 0 0 12px;
+  }
+  .feat:last-child { margin-bottom: 0; }
+  .feat h2 {
+    margin: 0 0 8px;
+    font-size: 16.5px; font-weight: 700; line-height: 1.45;
+    letter-spacing: -0.01em;
+    color: var(--text);
+  }
+  .feat p { margin: 0; color: var(--sub); font-size: 14.5px; line-height: 1.7; }
+  .feat .dot { color: var(--teal); margin-right: 7px; }
+
+  /* ── 문의 ── */
+  .contact { border-top: 1px solid var(--border); padding: 34px 0 30px; }
+  .contact h3 {
+    margin: 0 0 14px;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.14em;
+    color: var(--faint);
+  }
+  .contact ul { list-style: none; margin: 0; padding: 0; }
+  .contact li { margin: 0 0 10px; font-size: 14.5px; }
+  .contact li:last-child { margin-bottom: 0; }
+  .contact .k { display: inline-block; min-width: 106px; color: var(--faint); }
+  .contact a { color: var(--teal); text-decoration: none; border-bottom: 1px solid rgba(61, 201, 165, 0.35); }
+
+  /* ── 하단 ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 26px 0 60px;
+    text-align: center;
+    color: var(--faint);
+    font-size: 13px;
+  }
+  footer a { color: var(--faint); text-decoration: none; border-bottom: 1px solid var(--border); }
+  footer .sep { margin: 0 8px; opacity: 0.6; }
+  footer .copy { margin: 14px 0 0; font-size: 12.5px; }
+
+  @media (max-width: 360px) {
+    h1 { font-size: 26px; }
+    .wrap { padding: 0 18px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <p class="mark">핏챠</p>
+    <h1>헬스장 운영, 앱 하나로 끝.</h1>
+    <p class="sub">회원·수업·매출·정산을 한 곳에서.<br>헬스장 대표와 트레이너가 함께 쓰는 관리 앱입니다.</p>
+  </header>
+
+  <div class="cta">
+    <!-- APPSTORE_LINK_HERE — 승인 후 아래 span 을 <a href="[App Store URL]" class="badge"> 로 교체 -->
+    <span class="badge">곧 App Store에서 만나요</span>
+  </div>
+
+  <section>
+    <div class="feat">
+      <h2><span class="dot">●</span>놓치던 재등록을 잡습니다</h2>
+      <p>만료 임박 회원이 자동으로 보입니다. 연락 한 번이 재등록 한 건이 됩니다.</p>
+    </div>
+    <div class="feat">
+      <h2><span class="dot">●</span>월말 정산 싸움이 없어집니다</h2>
+      <p>트레이너별 완료 수업과 정산 금액이 자동으로 계산됩니다.</p>
+    </div>
+    <div class="feat">
+      <h2><span class="dot">●</span>대표와 트레이너가 같은 화면을 봅니다</h2>
+      <p>회원 인계·수업 현황·매출까지, 구두 보고 없이 앱에서 확인합니다.</p>
+    </div>
+  </section>
+
+  <!-- PRICING:HIDDEN — 심사 통과 전까지 숨긴다(총괄 확정 ⓑ). 승인 후 지시가 오면 이 주석의 여는 줄과 닫는 줄만 지워 켠다.
+       ※주석 안에서는 하이픈 두 개를 쓰지 않는다(HTML 주석이 조기 종료된다).
+  <section class="pricing">
+    <h2 class="pr-title">첫 3주, 전부 무료로 써보세요.</h2>
+    <ul class="pr-list">
+      <li><span class="pr-who">트레이너</span> <span class="pr-won">월 9,900원</span> <span class="pr-day">(하루 330원)</span></li>
+      <li><span class="pr-who">대표</span> <span class="pr-won">월 12,900원</span> <span class="pr-day">(하루 430원)</span></li>
+    </ul>
+    <p class="pr-note">각자 결제 · 언제든 해지</p>
+    <p class="pr-hook">재등록 1건이면 앱값 몇 달치입니다.</p>
+  </section>
+  <style>
+    .pricing { border: 1px solid var(--gold); border-radius: 14px; background: rgba(212, 168, 73, 0.07); padding: 24px 20px; }
+    .pr-title { margin: 0 0 18px; font-size: 17px; font-weight: 700; color: var(--gold); letter-spacing: -0.01em; }
+    .pr-list { list-style: none; margin: 0 0 14px; padding: 0; }
+    .pr-list li { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; margin: 0 0 10px; font-size: 15px; }
+    .pr-who { min-width: 62px; color: var(--sub); }
+    .pr-won { font-weight: 700; color: var(--text); }
+    .pr-day { color: var(--faint); font-size: 13.5px; }
+    .pr-note { margin: 0 0 4px; color: var(--faint); font-size: 13.5px; }
+    .pr-hook { margin: 0; color: var(--teal); font-size: 14px; font-weight: 600; }
+  </style>
+  PRICING:HIDDEN 끝 -->
+
+  <div class="contact">
+    <h3>문의</h3>
+    <ul>
+      <li><span class="k">이메일</span><a href="mailto:h31930491@gmail.com">h31930491@gmail.com</a></li>
+      <li><span class="k">카카오톡</span><a href="https://open.kakao.com/o/so9JyjDi">오픈채팅 바로가기</a></li>
+    </ul>
+  </div>
+
+  <footer>
+    <a href="{{ '/terms/' | relative_url }}">이용약관</a><span class="sep">·</span><a href="{{ '/privacy/' | relative_url }}">개인정보처리방침</a>
+    <p class="copy">© 2026 강한샘</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
