@@ -98,6 +98,18 @@ permalink: /
   .feat p { margin: 0; color: var(--sub); font-size: 14.5px; line-height: 1.7; }
   .feat .dot { color: var(--teal); margin-right: 7px; }
 
+  /* ── 화면 사진 — 가로 폭 65%(권고안 60~70%), 가운데 정렬 ── */
+  .shot { margin: 14px 0 0; text-align: center; }
+  .shot img {
+    width: 65%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+
   /* ── 확장 구역(구역 1·2) — 기존 카드와 같은 팔레트·간격을 쓴다 ── */
   .blk { padding: 0 0 52px; }
   .blk-title {
@@ -197,14 +209,17 @@ permalink: /
     <div class="feat">
       <h2><span class="dot">●</span>헬스장 업무가 앱에서 돌아갑니다</h2>
       <p>회원 등록, 수업 일정, 상담 기록, 업무 부여까지. 매일 하던 일이 앱 하나로 정리됩니다.</p>
+      <div class="shot"><img src="{{ '/assets/shots/tasks.png' | relative_url }}" alt="업무 관리 화면" width="480" height="1039" loading="lazy"></div>
     </div>
     <div class="feat">
       <h2><span class="dot">●</span>정산은 앱이 계산합니다</h2>
       <p>트레이너별 완료 수업 기준으로 자동 집계됩니다. 월말에 엑셀 붙잡고 싸울 일이 없습니다.</p>
+      <div class="shot"><img src="{{ '/assets/shots/settlement.png' | relative_url }}" alt="정산 관리 화면" width="480" height="1039" loading="lazy"></div>
     </div>
     <div class="feat">
       <h2><span class="dot">●</span>우리 센터가 숫자로 보입니다</h2>
       <p>매출·회원 현황·연령·운동 목적까지 한눈에. 대표와 트레이너가 같은 데이터를 봅니다.</p>
+      <div class="shot"><img src="{{ '/assets/shots/dashboard.png' | relative_url }}" alt="대시보드 화면" width="480" height="1039" loading="lazy"></div>
     </div>
   </section>
 
@@ -215,6 +230,7 @@ permalink: /
     <div class="item">
       <h3>회원마다 기록이 쌓입니다</h3>
       <p>목표 달성률, 인바디 측정, 회원별 사진이 날짜별로 데이터화됩니다. &ldquo;기간 슬슬 끝나가시는데&hellip;&rdquo;가 아니라, 수업 중 쌓인 기록으로 재등록을 설득합니다.</p>
+      <div class="shot"><img src="{{ '/assets/shots/portfolio.png' | relative_url }}" alt="포트폴리오 화면" width="480" height="1039" loading="lazy"></div>
     </div>
     <div class="item">
       <h3>운동일지를 카드로 공유합니다</h3>
@@ -223,6 +239,7 @@ permalink: /
     <div class="item">
       <h3>어떤 회원이 오는지 보입니다</h3>
       <p>신규 유입·재등록이 어떤 연령, 어떤 목적, 어떤 성별에서 나오는지 숫자로 확인합니다.</p>
+      <div class="shot"><img src="{{ '/assets/shots/stats.png' | relative_url }}" alt="회원 통계 화면" width="480" height="1039" loading="lazy"></div>
     </div>
     <div class="item">
       <h3>트레이너별 성과가 보입니다</h3>
