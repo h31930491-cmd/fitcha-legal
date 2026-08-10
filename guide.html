@@ -79,8 +79,12 @@ permalink: /guide/
     border: 1px solid var(--border); border-radius: 12px;
   }
 
-  /* 팁 */
-  .tip {
+  /* 팁
+     ★선택자를 `.sec p.tip` 으로 올린다 — 팁은 `<p class="tip">` 이라 위의 `.sec p`
+       (클래스+타입, 특이도 0-1-1)가 `.tip`(클래스 하나, 0-1-0)을 이겨
+       margin-top 14px 와 font-size 13.5px 가 덮이고 있었다(계산값 0px·14.5px 실측).
+       그래서 팁 상자가 바로 위 줄에 붙어 세로선이 글자와 겹쳐 보였다. */
+  .sec p.tip {
     margin: 14px 0 0; padding: 11px 13px;
     border-left: 3px solid var(--teal); border-radius: 0 9px 9px 0;
     background: rgba(61, 201, 165, 0.08);
