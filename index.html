@@ -110,6 +110,13 @@ permalink: /
     border-radius: 12px;
   }
 
+  /* ── 포스터 — 화면 사진(.shot)과 달리 «한 장짜리 그림»이라 폭을 꽉 채운다 ── */
+  .poster { padding: 0 0 52px; }
+  .poster img {
+    width: 100%; height: auto; display: block;
+    border: 1px solid var(--border); border-radius: 14px;
+  }
+
   /* ── 확장 구역(구역 1·2) — 기존 카드와 같은 팔레트·간격을 쓴다 ── */
   .blk { padding: 0 0 52px; }
   .blk-title {
@@ -254,6 +261,12 @@ permalink: /
       <p>체계 없던 업무를 시스템으로 만듭니다. 업무 부여, 날마다·주기적으로 해야 할 업무 체크리스트, 업무 담당자 지정, 완료 전후 사진까지 됩니다.</p>
     </div>
   </section>
+
+  <!-- 포스터 — 구역 1(왜 쓰는가)과 구역 2(누가 무엇을) 사이에 «무엇이 있는가»를 한 장으로 보여 준다.
+       홍보용 promo-web 을 480px 로 줄인 것이라 문구가 겹치지 않고, 요금은 원래 들어 있지 않다. -->
+  <div class="poster">
+    <img src="{{ '/assets/shots/promo.png' | relative_url }}" alt="핏챠에만 있는 기능 한눈에 보기" width="480" height="548" loading="lazy">
+  </div>
 
   <!-- 구역 2 — 기능 목록(대표용 / 트레이너용) -->
   <section class="blk">
