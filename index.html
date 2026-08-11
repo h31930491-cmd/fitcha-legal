@@ -110,12 +110,38 @@ permalink: /
     border-radius: 12px;
   }
 
-  /* ── 포스터 — 화면 사진(.shot)과 달리 «한 장짜리 그림»이라 폭을 꽉 채운다 ── */
-  .poster { padding: 0 0 52px; }
-  .poster img {
-    width: 100%; height: auto; display: block;
-    border: 1px solid var(--border); border-radius: 14px;
+  /* ── 핏챠에만 있는 것들 — 그림이 아니라 글자다(기기 글자 크기를 그대로 따른다) ── */
+  .only { padding: 0 0 52px; }
+  .only-hook {
+    margin: 0 0 10px;
+    font-size: 22px; line-height: 1.4; font-weight: 800; letter-spacing: -0.02em;
+    color: var(--gold); text-align: center;
   }
+  .only-lead {
+    margin: 0 0 18px;
+    font-size: 14px; font-weight: 700; letter-spacing: -0.01em;
+    color: var(--sub); text-align: center;
+  }
+  .only-list { display: grid; gap: 8px; }
+  .oc {
+    border: 1px solid rgba(212, 168, 73, 0.30);
+    border-radius: 12px;
+    background: rgba(212, 168, 73, 0.05);
+    padding: 13px 15px;
+  }
+  .oc h3 {
+    margin: 0 0 5px;
+    font-size: 15.5px; font-weight: 700; line-height: 1.4; letter-spacing: -0.01em;
+    color: var(--gold);
+  }
+  .oc p { margin: 0; font-size: 14px; line-height: 1.6; color: var(--sub); }
+  .only-basic {
+    margin: 14px 0 0;
+    padding: 13px 15px; border: 1px dashed var(--border); border-radius: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    font-size: 13.5px; line-height: 1.6; color: var(--faint); text-align: center;
+  }
+  .only-basic b { color: var(--sub); font-weight: 700; }
 
   /* ── 확장 구역(구역 1·2) — 기존 카드와 같은 팔레트·간격을 쓴다 ── */
   .blk { padding: 0 0 52px; }
@@ -212,13 +238,35 @@ permalink: /
     <span class="badge">곧 App Store에서 만나요</span>
   </div>
 
-  <!-- 포스터 — 버튼 바로 아래. 「센터가 커질수록…」 후킹 문구부터 기능 14개까지 한 장으로 보여 준다.
-       ★랜딩용은 «1열 세로»(720px)다 — 2열판은 폰 폭에 눌리면 카드 글자가 읽히지 않는다.
-         인스타용 2열판(promo-final-v2)은 그대로 따로 쓴다.
-       파일은 원본 픽셀 그대로 올리고 표시 폭만 CSS(width:100%)가 정한다. 요금은 들어 있지 않다. -->
-  <div class="poster">
-    <img src="{{ '/assets/shots/promo.png' | relative_url }}" alt="센터가 커질수록, 감이 아니라 시스템이 필요합니다 — 핏챠 기능 한눈에 보기" width="720" height="2227" loading="lazy">
-  </div>
+  <!-- 핏챠에만 있는 것들 — 버튼 바로 아래.
+       ★그림이 아니라 «글자»다. 포스터 이미지를 쓰면 폰 폭에 맞춰 축소되면서 카드 글자가
+         읽히지 않았다(720px 판이 390px 화면에서 절반으로 줄었다). 텍스트로 두면
+         기기 글자 크기를 그대로 따르고, 확대·복사·검색도 된다.
+       인스타용 이미지 포스터는 저장소 밖 홍보 폴더에 따로 있고 이것과 무관하다.
+       ※주석에 파일명을 그대로 적지 않는다 — 적으면 「참조 0건」 검산이 주석까지 세어 헛걸린다. -->
+  <section class="only">
+    <h2 class="only-hook">센터가 커질수록,<br>감이 아니라 시스템이 필요합니다</h2>
+    <p class="only-lead">핏챠에만 있는 것들 —</p>
+
+    <div class="only-list">
+      <div class="oc"><h3>운동일지 카톡 카드</h3><p>사진+텍스트 카드로 회원에게 바로 전송</p></div>
+      <div class="oc"><h3>회원 포트폴리오</h3><p>인바디·체형·바디프로필 날짜별로</p></div>
+      <div class="oc"><h3>목표 달성률</h3><p>회원별 목표, 원형 그래프로</p></div>
+      <div class="oc"><h3>회원 통계</h3><p>연령·성별·목적별로 통계가 나옵니다</p></div>
+      <div class="oc"><h3>재등록 기준별 분석</h3><p>연령·목적·성별, 어디서 되고 안 되는지</p></div>
+      <div class="oc"><h3>트레이너별 재등록률</h3><p>누구에게 재등록이 붙는지 막대로</p></div>
+      <div class="oc"><h3>내 강·약점</h3><p>잘 되는 층·안 되는 층 자동 구분</p></div>
+      <div class="oc"><h3>상담 전환 분석</h3><p>상담 몇 명 중 몇 명이 등록했는지</p></div>
+      <div class="oc"><h3>업무 부여 + 전후 사진</h3><p>지시 사진과 완료 사진 나란히</p></div>
+      <div class="oc"><h3>업무 보고</h3><p>트레이너 보고가 알림으로 올라옵니다</p></div>
+      <div class="oc"><h3>업무 기준·체크리스트</h3><p>기본 업무를 사진과 함께 기록</p></div>
+      <div class="oc"><h3>트레이너 평가</h3><p>출근율·수업 진행률·월별 실적</p></div>
+      <div class="oc"><h3>정산 자동 집계</h3><p>회수×금액×정산율, 줄마다 투명하게</p></div>
+      <div class="oc"><h3>담당 인계 이력</h3><p>인계·인수 기록이 양쪽에 남음</p></div>
+    </div>
+
+    <p class="only-basic"><b>회원 등록 · 수업 일정 · 매출 분석 · 상담 기록</b>은 당연히 기본</p>
+  </section>
 
   <section>
     <div class="feat">
