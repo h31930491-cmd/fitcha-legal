@@ -97,5 +97,5 @@ permalink: /terms/
 <div class="biz">
 상호 마음홈케어 · 대표 강한샘 · 사업자등록번호 304-26-02759<br>
 소재지 강원특별자치도 원주시 · 개인정보 보호책임자 강한샘<br>
-문의 <a href="mailto:h31930491@gmail.com">h31930491@gmail.com</a>
+문의 <a href="mailto:novita130@naver.com">novita130@naver.com</a>
 </div>
