@@ -8,7 +8,7 @@ permalink: /
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>핏챠 — 헬스장 운영, 앱 하나로 끝.</title>
-<meta name="description" content="회원·수업·매출·정산을 한 곳에서. 헬스장 대표와 트레이너가 함께 쓰는 관리 앱입니다.">
+<meta name="description" content="회원·수업·매출·정산을 한 곳에서. 대표와 트레이너가 함께 쓰는 관리 앱">
 <meta name="theme-color" content="#0f1115">
 <!-- 링크 미리보기(카톡·인스타·트위터). 이미지는 저장소 안 assets/og-image.png 를 «절대 URL» 로 건다
      — 상대 경로는 미리보기 수집기가 못 읽는 경우가 많다. -->
@@ -75,6 +75,7 @@ permalink: /
     color: var(--gold);
     font-size: 15.5px; font-weight: 700;
     letter-spacing: -0.01em;
+    text-decoration: none;
   }
   /* 승인 후 .badge 를 span 에서 a 로 바꿔도 이 스타일이 그대로 먹는다(태그 선택자를 쓰지 않았다) */
   a.badge { text-decoration: none; }
@@ -234,8 +235,7 @@ permalink: /
   </header>
 
   <div class="cta">
-    <!-- APPSTORE_LINK_HERE — 승인 후 아래 span 을 <a href="[App Store URL]" class="badge"> 로 교체 -->
-    <span class="badge">곧 App Store에서 만나요</span>
+    <a class="badge" href="https://apps.apple.com/app/id6798469498" target="_blank" rel="noopener">App Store에서 다운로드</a>
   </div>
 
   <!-- 핏챠에만 있는 것들 — 버튼 바로 아래.
@@ -354,10 +354,10 @@ permalink: /
     </div>
   </section>
 
-  <!-- PRICING:HIDDEN — 심사 통과 전까지 숨긴다(총괄 확정 ⓑ). 승인 후 지시가 오면 이 주석의 여는 줄과 닫는 줄만 지워 켠다.
-       ※주석 안에서는 하이픈 두 개를 쓰지 않는다(HTML 주석이 조기 종료된다).
+  <!-- 요금 구역 — 2026-08-18 출시 확정으로 켰다(1번 회차 · 총괄 확정).
+       ※미구현 기능을 약속하는 문장은 적지 않는다 — 주석에도 남기지 않는다. -->
   <section class="pricing">
-    <h2 class="pr-title">첫 1주 무료. 동료를 초대하면 1주가 더 늘어납니다.</h2>
+    <h2 class="pr-title">첫 1주, 전부 무료로 써보세요.</h2>
     <ul class="pr-list">
       <li><span class="pr-who">트레이너</span> <span class="pr-won">월 9,900원</span> <span class="pr-day">(하루 330원)</span></li>
       <li><span class="pr-who">대표</span> <span class="pr-won">월 12,900원</span> <span class="pr-day">(하루 430원)</span></li>
@@ -376,7 +376,6 @@ permalink: /
     .pr-note { margin: 0 0 4px; color: var(--faint); font-size: 13.5px; }
     .pr-hook { margin: 0; color: var(--teal); font-size: 14px; font-weight: 600; }
   </style>
-  PRICING:HIDDEN 끝 -->
 
   <div class="contact">
     <h3>문의</h3>
