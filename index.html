@@ -246,7 +246,7 @@ permalink: /
   <div class="cta">
     <div class="stores">
       <a class="badge" href="https://apps.apple.com/app/id6798469498" target="_blank" rel="noopener">App Store에서 다운로드</a>
-      <a class="badge" href="https://play.google.com/store/apps/details?id=com.fitcha.gymapp" target="_blank" rel="noopener">Google Play에서 다운로드</a>
+      <a class="badge" id="badge-play" href="https://play.google.com/store/apps/details?id=com.fitcha.gymapp" target="_blank" rel="noopener">Google Play에서 다운로드</a>
     </div>
   </div>
 
@@ -404,5 +404,20 @@ permalink: /
 
 </div>
 
+<!-- ★2026-09-15 — App Review 2.3.10(Accurate Metadata) 대응.
+     iPhone·iPad·iPod 에서 접속하면 Google Play 버튼만 숨긴다. 버튼은 지우지 않고,
+     안드로이드·PC 에서는 그대로 보인다. userAgent 판정이라 서버 설정이 필요 없다.
+     ※iPadOS 13+ Safari 는 userAgent 가 «Macintosh» 로 나간다 — 터치 지점이 있으면 iPad 로 본다.
+       Mac 데스크톱은 maxTouchPoints 가 0 이라 그대로 보인다. -->
+<script>
+  (function () {
+    var ua = navigator.userAgent;
+    var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+    if (ios) {
+      var el = document.getElementById("badge-play");
+      if (el) el.style.display = "none";
+    }
+  })();
+</script>
 </body>
 </html>
